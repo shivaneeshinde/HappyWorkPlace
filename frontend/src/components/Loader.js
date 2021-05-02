@@ -8,7 +8,10 @@ const Loader = (props) => {
           <div className="ui active inverted dimmer">
             <div
               className="ui large text loader"
-              style={{ marginTop: `${props.topMargin}px` }}
+              style={{
+                marginTop: `${props.topMargin}px`,
+                marginLeft: `${props.leftMargin}px`,
+              }}
             >
               {props.text}
             </div>
