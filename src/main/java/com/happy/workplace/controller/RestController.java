@@ -22,6 +22,7 @@ import com.happy.workplace.service.TeamsService;
 import com.happy.workplace.service.UserService;
 
 
+@CrossOrigin(origins = "http://happyworkplace.herokuapp.com")
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
 	
