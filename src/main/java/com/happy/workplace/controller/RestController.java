@@ -42,7 +42,7 @@ public class RestController {
 	@Autowired
 	private ActivityService activityService;
 	
-	@RequestMapping(value = {"/"})
+	@GetMapping(value = {"/"})
 	public String index() {
 	    return "index.html";
 	}
