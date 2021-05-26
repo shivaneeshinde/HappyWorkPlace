@@ -42,7 +42,10 @@ public class RestController {
 	@Autowired
 	private ActivityService activityService;
 	
-	@RequestMapping(value = {"/","/ui/{**}"})
+	@RequestMapping(value = {"/"})
+	public String index() {
+	    return "index.html";
+	}
 	
 	@GetMapping("/healthCheck")
 	public String check()
