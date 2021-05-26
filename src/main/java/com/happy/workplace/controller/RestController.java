@@ -87,9 +87,4 @@ public class RestController {
 		return activity;
 	}
 	
-	@GetMapping(value = {"/"})
-	public String index() {
-	    return "/";
-	}
-
 }
