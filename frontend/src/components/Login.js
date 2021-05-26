@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class Login extends Component {
-  state = { emailId: "", password: "", invalid: false };
+  state = { email: "", password: "", invalid: false };
 
   handleChange = (event) => {
     this.setState({
@@ -30,7 +30,6 @@ class Login extends Component {
         "role",
         JSON.stringify(loginResponse.data.roles.role_id)
       );
-      window.location.pathname = "/home";
     } else {
       this.setState({ invalid: true });
     }
