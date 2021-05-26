@@ -15,7 +15,7 @@ class Login extends Component {
     const loginResponse = await axios.post(
       "https://happyworkplace.herokuapp.com/login",
       {
-        email: this.state.email,
+        emailId: this.state.email,
         password: this.state.password,
       }
     );
