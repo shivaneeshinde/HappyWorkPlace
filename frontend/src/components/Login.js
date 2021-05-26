@@ -12,38 +12,38 @@ class Login extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    // const loginResponse = await axios.post(
-    //   "https://happyworkplace.herokuapp.com/login",
-    //   {
-    //     email: this.state.email,
-    //     password: this.state.password,
-    //   }
-    // );
-    // if (loginResponse.status === 200) {
-    //   sessionStorage.setItem(
-    //     "token",
-    //     JSON.stringify(loginResponse.data.user_id)
-    //   );
-    //   sessionStorage.setItem("email", JSON.stringify(loginResponse.data.email));
-    //   sessionStorage.setItem("name", JSON.stringify(loginResponse.data.name));
-    //   sessionStorage.setItem(
-    //     "role",
-    //     JSON.stringify(loginResponse.data.roles.role_id)
-    //   );
-    //   window.location.pathname = "/home";
-    // } else {
-    //   this.setState({ invalid: true });
-    // }
-    const loginResponse = await axios.get(
-      "https://608d1c869f42b20017c3e804.mockapi.io/api/users/1"
+    const loginResponse = await axios.post(
+      "https://happyworkplace.herokuapp.com/login",
+      {
+        email: this.state.email,
+        password: this.state.password,
+      }
     );
     if (loginResponse.status === 200) {
-      sessionStorage.setItem("token", JSON.stringify(loginResponse.data.id));
+      sessionStorage.setItem(
+        "token",
+        JSON.stringify(loginResponse.data.user_id)
+      );
       sessionStorage.setItem("email", JSON.stringify(loginResponse.data.email));
       sessionStorage.setItem("name", JSON.stringify(loginResponse.data.name));
-      sessionStorage.setItem("role", JSON.stringify(loginResponse.data.role));
+      sessionStorage.setItem(
+        "role",
+        JSON.stringify(loginResponse.data.roles.role_id)
+      );
       window.location.pathname = "/home";
+    } else {
+      this.setState({ invalid: true });
     }
+    // const loginResponse = await axios.get(
+    //   "https://608d1c869f42b20017c3e804.mockapi.io/api/users/1"
+    // );
+    // if (loginResponse.status === 200) {
+    //   sessionStorage.setItem("token", JSON.stringify(loginResponse.data.id));
+    //   sessionStorage.setItem("email", JSON.stringify(loginResponse.data.email));
+    //   sessionStorage.setItem("name", JSON.stringify(loginResponse.data.name));
+    //   sessionStorage.setItem("role", JSON.stringify(loginResponse.data.role));
+    //   window.location.pathname = "/home";
+    // }
   };
 
   render() {
