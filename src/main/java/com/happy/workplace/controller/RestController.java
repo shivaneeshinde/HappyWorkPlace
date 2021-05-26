@@ -44,7 +44,7 @@ public class RestController {
 	
 	@GetMapping(value = {"/"})
 	public String index() {
-	    return "index.html";
+	    return "/frontend/public/index.html";
 	}
 	
 	@GetMapping("/healthCheck")
