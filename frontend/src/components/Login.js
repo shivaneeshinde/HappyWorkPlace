@@ -30,6 +30,7 @@ class Login extends Component {
         "role",
         JSON.stringify(loginResponse.data.roles.role_id)
       );
+      window.location.reload();
     } else {
       this.setState({ invalid: true });
     }
