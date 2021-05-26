@@ -88,9 +88,8 @@ class Login extends Component {
                 className="ui fluid large blue submit button"
                 onClick={this.handleSubmit}
               >
-                Demo Login
+                Login
               </div>
-              <p>Username/password not required</p>
             </div>
           </form>
           {this.state.invalid ? <div>Invalid Username or password</div> : ""}
