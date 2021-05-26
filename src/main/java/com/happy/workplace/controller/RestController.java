@@ -42,11 +42,6 @@ public class RestController {
 	@Autowired
 	private ActivityService activityService;
 	
-	@GetMapping(value = {"/"})
-	public String index() {
-	    return "/frontend/public/index.html";
-	}
-	
 	@GetMapping("/healthCheck")
 	public String check()
 	{
@@ -92,5 +87,9 @@ public class RestController {
 		return activity;
 	}
 	
+	@GetMapping(value = {"/"})
+	public String index() {
+	    return "index";
+	}
 
 }
